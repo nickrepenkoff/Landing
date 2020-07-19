@@ -1,0 +1,52 @@
+
+.slick-list{
+    overflow: hidden;
+}
+.slick-track{
+    display: flex;
+}
+
+.banner{
+    position: relative;
+    padding-top: 170px;
+    padding-bottom: 240px;
+    .slick-dots{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 21%;
+        li{
+            margin-left: 40px;
+            background: #FFFFFF;
+            opacity: 0.4;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .slick-active{
+            opacity: 1;
+        }
+        button{
+            font-size: 0;
+        }
+    }
+    .slick-arrow{
+        position: absolute;
+        bottom: 0;
+        right: 21%;
+    }
+    .banner__content{
+        .banner__title{
+            font-family: Merriweather;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 1.5;
+            color: #FFFFFF;
+        }
+        .banner__btn{
+            width: 270px;
+            height: 60px
+        }
+    }
+}
