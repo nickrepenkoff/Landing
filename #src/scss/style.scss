@@ -1,6 +1,4 @@
-
 // шрифты
-
 
 @import "header.scss";
 @import "slider.scss";
@@ -10,86 +8,214 @@
 $fontfamily: "Lato";
 $min-width: 320px;
 $max-width: 1326;
-$md1:$max-width+12;
-$md2:1024;
+$md1: $max-width + 12;
+$md2: 1024;
 $md3: 767.98;
-$md4:479.98;
+$md4: 479.98;
 //
 
-
 /*Обнуление*/
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
-*,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-
-nav,footer,header,aside, section{display: block;}
-
-html,body{
-	height: 100%;
-	width: 100%;
-	font-size: 14px;
-	font-family: $fontfamily;
-	font-weight: normal;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+:focus,
+:active {
+  outline: none;
 }
-input,button,textarea{font-family: $fontfamily;}
+a:focus,
+a:active {
+  outline: none;
+}
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
+nav,
+footer,
+header,
+aside,
+section {
+  display: block;
+}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  font-family: $fontfamily;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: $fontfamily;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
 /*--------------------*/
 
 /*ibg*/
 
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  img {
+    display: none !important;
+  }
+}
+.lock {
+  overflow: hidden;
+}
+.container {
+  width: 1040px;
+  margin: 0 auto;
+}
+.title {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+}
+.btn {
+  color: #fff;
+  background-color: #005fa3;
+  font-size: 18px;
+  line-height: 2.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.ibg{
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	img {
-		display: none !important;
-	}
-	
+.__line {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  color: #bdbdbd;
 }
-.lock{
-	overflow: hidden;
+.service {
+  background: #ebebeb;
+  font-family: Lato;
+  &__container {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    padding: 140px 0 40px 0;
+  }
+
+  &__line {
+    position: absolute;
+    color: #fff;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    padding-top: 79%;
+    padding-left: 11%;
+  }
+
+  &__title {
+    padding-bottom: 102px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    &:last-child {
+      padding-bottom: 140px;
+    }
+  }
+
+  &__box {
+    background: url("../img/img.jpg") no-repeat 100%;
+    width: 33.333%;
+    height: 360px;
+    position: relative;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__box:hover {
+    cursor: pointer;
+    background: url("../img/img_2.jpg") no-repeat 100%;
+    transition: all 1s;
+  }
+
+  //   &__img {
+  //   }
 }
-.container{
-	max-width: 1040px;
-	margin: 0 auto;
-	
-}
-.title{
-	font-family: Merriweather;
-	font-style: normal;
-	font-weight: 900;
-	font-size: 48px;
-}
-.btn{
-	color: #fff;
-	background-color: #005FA3;
-	font-size: 18px;
-	line-height: 2.5;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+@media (max-width: 1140px) {
+  .service {
+    &__container {
+      width: 980px;
+    }
+
+    &__item {
+      padding: 80px 0 25px 0;
+    }
+
+    &__title {
+      padding-bottom: 72px;
+    }
+    &__wrapper {
+      padding-bottom: 20px;
+    }
+
+    &__box {
+      width: 50%;
+      // height: 324px;
+    }
+    &__line {
+      padding-top: 92%;
+      padding-left: 11%;
+    }
+  }
 }
