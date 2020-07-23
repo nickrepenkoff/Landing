@@ -13,8 +13,8 @@
     .slick-dots{
         display: flex;
         position: absolute;
-        bottom: 0;
-        left: 21%;
+        bottom: 113px;
+        left: 23%;
         li{
             margin-left: 40px;
             background: #FFFFFF;
@@ -22,6 +22,9 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
+            &:first-child{
+                margin-left: 0;
+            }
         }
         .slick-active{
             opacity: 1;
@@ -32,8 +35,32 @@
     }
     .slick-arrow{
         position: absolute;
-        bottom: 0;
-        right: 21%;
+        bottom: 113px;
+        right: 23%;
+        font-size: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before{
+            content: "";
+            position: absolute;
+            background: url(../img/next.svg) no-repeat center center;
+            height: 15px;
+            width: 8px;
+        }
+        &.slick-next, &.slick-prev{
+            width: 60px;
+            height: 60px;
+            background:rgba(255,255,255, 0.4);
+        }
+        &.slick-prev{
+            transform: rotate(180deg);
+            right: 27%;
+            
+        }
+        &.slick-disabled{
+            opacity: .2;
+        }
     }
     .banner__content{
         .banner__title{
@@ -48,5 +75,9 @@
             width: 270px;
             height: 60px
         }
+    }
+    .slider-nav{
+        position: absolute;
+        bottom: 0;
     }
 }
