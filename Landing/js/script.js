@@ -9,45 +9,75 @@ ibg();
 
 
 
-$(".menu-burger").click(function(event){
-	$(".menu-burger, .navbar").toggleClass("active");
-	$("body").toggleClass("lock");
-});
+// $('.lang-switcher').click(function(){
+// 	$('.sub-menu').toggleClass('active');
+// 	$('.swith-icon').toggleClass('active')
+
+// })
 
 $(document).ready(function(){
-	$('.banner').slick({
+	$('.banner-slider').slick({
 	infinite: false,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	dots: true,
 	swipe: true,
 	draggale: true,
+	appendArrows: $(".banner-nav"),
+	appendDots: $(".banner-nav"),
   });
+  $(".partner__slider").slick({
+		arrows: true,
+		dots: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: false,
+		appendArrows: $(".slider-nav"),
+		appendDots: $(".slider-nav"),
+		responsive: [
+			{
+			  breakpoint: 1117,
+			  settings: {
+				slidesToShow: 3,
+			  }
+			},
+			{
+			  breakpoint: 769,
+			  settings: {
+				slidesToShow: 2
+			  }
+			},
+			{
+				breakpoint: 577,
+				settings: {
+				  slidesToShow: 1
+				}
+			  }
+		  ]
+	});
+	$(".review__slider").slick({
+		arrows: true,
+		dots: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		appendArrows: $(".review-nav"),
+		appendDots: $(".review-nav"),
+		responsive: [
+			{
+				breakpoint: 577,
+				settings: {
+					autoplay: true,
+					autoplaySpeed: 4000
+				}
+			  }
+		]
+	});
+});
+
+$(".burger-menu").click(function(event){
+	$(".burger-menu, .navbar").toggleClass("active");
+	$("body").toggleClass("lock");
 });
 
 
-
-function initMenu(){
-
-	var linksList = document.getElementsByClassName("menu__list")[0];
-	var links = linksList.getElementsByClassName("menu__list__item");
-	// console.log(links)
-	// debugger
-
-	for (var i = 0; i < links.length; i++) {
-	  links[i].addEventListener("click", function() {
-		  var current = document.getElementsByClassName("active");
-		  if (current.length > 0) { 
-		    current[0].className = current[0].className.replace(" active", "");
-	  }
-	  this.className += " active";
-	  });
-	}
-}
-initMenu();
-
-
-// $(".tab__link").click(function(e) {
-// 	e.preventDefault();
-// 	$(".tab__content").removeClass("active").eq($(this).index()).addClass("active");
-// }).eq(0).addClass("active");
